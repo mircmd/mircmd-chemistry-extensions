@@ -1,0 +1,8 @@
+type: icons
+protocol: v1
+metadata:
+  id: chemistry-icons
+  name: Chemistry Icons
+  version: 1.0.0
+  publisher: mircmd
+  description: Icons for chemistry objects

@@ -1,0 +1,28 @@
+package mircmd:file-importer@0.1.0;
+
+interface types {
+    type node-id = u32;
+
+    record node {
+        id: node-id,
+        name: string,
+        type-id: string,
+        data: list<u8>,
+        children: list<node-id>,
+    }
+
+    record tree {
+        root: node-id,
+        nodes: list<node>,
+    }
+}
+
+interface importer {
+    use types.{tree};
+
+    load: func(file-path: string) -> result<tree, string>;
+}
+
+world file-importer-extension {
+    export importer;
+}

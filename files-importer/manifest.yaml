@@ -1,0 +1,8 @@
+type: file_importer
+protocol: v1
+metadata:
+  id: chemistry-files-importer
+  name: Chemistry Files Importer
+  version: 1.0.0
+  publisher: mircmd
+  description: Imports XYZ, Cube, UNEX, CFOUR, MDL Mol V2000, Gaussian/FChk, ORCA, Psi4, Q-Chem, NWChem, xTB, GAMESS/UK/DAT, Turbomole, Molpro, Molcas, ADF, DALTON, Jaguar, MOPAC and CJSON
