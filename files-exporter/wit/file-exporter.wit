@@ -1,0 +1,24 @@
+package mircmd:file-exporter@0.1.0;
+
+interface types {
+    record format {
+        id: string,
+        name: string,
+        extensions: list<string>,
+        supported-node-types: list<string>,
+        // A JSON Schema object, or none when the format has no settings.
+        settings-schema: option<string>,
+    }
+}
+
+interface exporter {
+    use types.{format};
+
+    formats: func() -> result<list<format>, string>;
+    // data is the object's serialized content; settings is a JSON object.
+    dump: func(data: list<u8>, format-id: string, settings: string, file-path: string) -> result<_, string>;
+}
+
+world file-exporter-extension {
+    export exporter;
+}

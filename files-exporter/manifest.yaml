@@ -1,0 +1,8 @@
+type: file_exporter
+protocol: v1
+metadata:
+  id: chemistry-files-exporter
+  name: Chemistry Files Exporter
+  version: 1.0.0
+  publisher: mircmd
+  description: Exports atomic coordinates to XYZ
